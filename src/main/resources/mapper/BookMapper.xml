@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.izengmei.kindle.dao.BookMapper">
+  <resultMap id="BaseResultMap" type="cn.izengmei.kindle.model.Book">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="book_name" jdbcType="VARCHAR" property="bookName" />
+    <result column="book_author" jdbcType="VARCHAR" property="bookAuthor" />
+    <result column="book_date" jdbcType="TIMESTAMP" property="bookDate" />
+    <result column="book_publisher" jdbcType="VARCHAR" property="bookPublisher" />
+    <result column="book_abstract" jdbcType="VARCHAR" property="bookAbstract" />
+    <result column="book_dir" jdbcType="VARCHAR" property="bookDir" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+  </resultMap>
+</mapper>
