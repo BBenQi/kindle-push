@@ -19,4 +19,8 @@ public class BookServiceImpl extends AbstractService<Book> implements BookServic
     @Resource
     private BookMapper bookMapper;
 
+    @Override
+    public int findNum() {
+        return this.bookMapper.selectAllCount();
+    }
 }

@@ -51,4 +51,10 @@ public class BookController {
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
     }
+
+    @GetMapping("count")
+    public Result count() {
+        int count = bookService.findNum();
+        return ResultGenerator.genSuccessResult(count);
+    }
 }
