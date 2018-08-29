@@ -1,5 +1,7 @@
 package cn.izengmei.kindle.web;
 
+import cn.izengmei.kindle.core.Result;
+import cn.izengmei.kindle.core.ResultGenerator;
 import cn.izengmei.kindle.model.SendVo;
 import cn.izengmei.kindle.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +15,9 @@ public class EmailController {
     private EmailService emailService;
 
     @PostMapping("/send")
-    public void sendEmail(@RequestBody SendVo sendVo) throws Exception {
+    public Result sendEmail(@RequestBody SendVo sendVo) throws Exception {
         this.emailService.sendEmail(sendVo.getUserEmail(),sendVo.getFilePath());
+        return ResultGenerator.genSuccessResult();
     }
 
     @RequestMapping("/get")
