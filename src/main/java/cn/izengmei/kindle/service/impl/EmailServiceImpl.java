@@ -22,9 +22,9 @@ public class EmailServiceImpl implements EmailService {
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage,true);
         mimeMessageHelper.setFrom("466659581@qq.com");
         mimeMessageHelper.setTo(emailAdress);
-        mimeMessageHelper.setSubject("Kindle书籍发送");
+        mimeMessageHelper.setSubject("Kindle书籍发送" + Math.random());
 
-        mimeMessageHelper.setText("Kindle推送系统");
+        mimeMessageHelper.setText("Kindle推送系统" + Math.random());
 
         FileSystemResource fileSystemResource = new FileSystemResource(new File(filePath));
         String[] filePathArr = filePath.split("/");
